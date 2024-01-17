@@ -4,7 +4,7 @@
 <div class="row">
     <div class="col">
 
-        <form autocomplete="off">
+        <form [formGroup]="myForm" (ngSubmit) = "onSubmit()" autocomplete="off">
 
             <!-- Nombre -->
             <div class="row mb-3">
@@ -12,6 +12,7 @@
                 <div class="col-sm-9">
                     <input type="text"
                            class="form-control"
+                           formControlName = "name"
                            placeholder="Nombre del usuario">
 
                     <span class="form-text text-danger">
@@ -26,6 +27,7 @@
                 <div class="col-sm-9">
                     <input type="email"
                            class="form-control"
+                           formControlName = "email"
                            placeholder="Email del usuario">
                     <span class="form-text text-danger">
                         mensaje de error del email
@@ -39,6 +41,7 @@
                 <div class="col-sm-9">
                     <input type="text"
                            class="form-control"
+                           formControlName = "username"
                            placeholder="Nombre código del usuario">
                     <span class="form-text text-danger">
                          El username no puede ser Strider
@@ -52,6 +55,7 @@
                 <div class="col-sm-9">
                     <input type="password"
                            class="form-control"
+                           formControlName = "password"
                            placeholder="Password de su cuenta">
 
                     <span class="form-text text-danger">
@@ -66,6 +70,7 @@
                 <div class="col-sm-9">
                     <input type="password"
                            class="form-control"
+                           formControlName = "password2"
                            placeholder="Confirmar la contraseña">
 
                     <span class="form-text text-danger">
